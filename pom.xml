@@ -35,6 +35,13 @@
             <version>5.13.4</version>
             <scope>test</scope>
         </dependency>
+
+
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>21.0.6</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -51,6 +58,16 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.5.4</version>
+            </plugin>
+
+
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.8</version>
+                <configuration>
+                    <mainClass>com.view.ConferenceManagementApp</mainClass>
+                </configuration>
             </plugin>
         </plugins>
     </build>

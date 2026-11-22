@@ -6,7 +6,7 @@ import java.sql.Statement;
 public class DatabaseConnection {
 	private static final String DATABASE_URL = "jdbc:sqlite:conference.db";
 	private DatabaseConnection() {}
-	
+
 	public static Connection getConnection() throws SQLException{
 		Connection connection = DriverManager.getConnection(DATABASE_URL);
 		try {
