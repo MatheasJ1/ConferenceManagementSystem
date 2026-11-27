@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1050.0" style="-fx-background-color: #EDF1F6;" stylesheets="@dashboard.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.ConferenceDetailsController">
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="75.0" prefWidth="587.0" spacing="15.0" style="-fx-background-color: #14263F;" BorderPane.alignment="CENTER_LEFT">
+         <children>
+            <Label style="-fx-text-fill: white; -fx-font-size: 22px; -fx-font-weight: bold;" text="Conference management System" />
+            <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <Label fx:id="welcomeLabel" alignment="CENTER_RIGHT" prefHeight="75.0" style="-fx-text-fill: white; -fx-font-size: 15px;" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </HBox>
+   </top>
+   <left>
+      <VBox alignment="TOP_CENTER" prefHeight="494.0" prefWidth="210.0" spacing="15.0" style="-fx-background-color: #1E3552;" BorderPane.alignment="TOP_CENTER">
+         <children>
+            <Button fx:id="browseButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#goBack" prefHeight="40.0" style="-fx-background-color: #365C88; -fx-text-fill: white; -fx-background-radius: 6; -fx-font-size: 13px; -fx-cursor: hand;" text="Browse Conferences" />
+            <Button fx:id="myRegistrationsButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" style="-fx-background-color: #365C88; -fx-text-fill: white; -fx-background-radius: 6; -fx-font-size: 13px; -fx-cursor: hand;" text="My registrations" />
+            <Region prefHeight="384.0" prefWidth="180.0" />
+            <Button fx:id="logoutButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#logout" prefHeight="40.0" style="-fx-background-color: red; -fx-text-fill: white; -fx-background-radius: 6; -fx-font-size: 13px; -fx-cursor: hand;" text="Log out" />
+         </children>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="15.0" BorderPane.alignment="TOP_LEFT">
+         <children>
+            <Button fx:id="backToConferencesButton" mnemonicParsing="false" onAction="#goBack" prefHeight="30.0" style="-fx-background-color: transparent; -fx-text-fill: #365C88; -fx-font-size: 14px; -fx-font-weight: bold; -fx-cursor: hand; -fx-padding: 5 0;" text="← Back to Conferences" />
+            <HBox prefHeight="47.0" prefWidth="800.0">
+               <children>
+                  <Label fx:id="conferenceTitleLabel" text="Label" />
+                  <Region prefHeight="100.0" prefWidth="662.0" />
+                  <Label fx:id="statusLabel" text="Label" />
+               </children>
+            </HBox>
+            <GridPane hgap="20.0" prefHeight="131.0" prefWidth="790.0" style="-fx-background-color: white; -fx-background-radius: 8; -fx-border-color: #CBD5E1; -fx-border-radius: 8; -fx-padding: 20;" vgap="8.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label style="-fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #64748B;" text="Start Date" />
+                  <Label style="-fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #64748B;" text="End Date" GridPane.columnIndex="1" />
+                  <Label style="-fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #64748B;" text="Location" GridPane.rowIndex="2" />
+                  <Label style="-fx-font-size: 12px; -fx-font-weight: bold; -fx-text-fill: #64748B;" text="Capacity" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label fx:id="startDateLabel" prefHeight="17.0" prefWidth="42.0" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #14263F;" text="Label" GridPane.rowIndex="1" />
+                  <Label fx:id="locationLabel" prefHeight="17.0" prefWidth="49.0" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #14263F;" text="Label" GridPane.rowIndex="3" />
+                  <Label fx:id="endDateLabel" prefHeight="17.0" prefWidth="44.0" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #14263F;" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="capacityLabel" prefHeight="17.0" prefWidth="75.0" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #14263F;" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+            <VBox fx:id="descriptionBox" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #14263F;" text="About this Conference" />
+                  <Label fx:id="descriptionLabel" style="-fx-font-size: 14px; -fx-text-fill: #475569;" text="Conference Description" wrapText="true" />
+               </children>
+            </VBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="12.0">
+               <children>
+                  <Button fx:id="registerButton" mnemonicParsing="false" onAction="#register" prefHeight="40.0" prefWidth="210.0" style="-fx-text-fill: white; -fx-font-size: 13px; -fx-font-weight: bold; -fx-background-color: #14263F; -fx-background-radius: 6; -fx-cursor: hand; pad: 10 20;" text="Register for Conference" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="backButton" mnemonicParsing="false" onAction="#goBack" prefHeight="40.0" prefWidth="210.0" style="-fx-text-fill: #14263F; -fx-border-color: #14263F; -fx-border-radius: 6; -fx-font-size: 13px; -fx-font-weight: bold; -fx-background-color: white; -fx-background-radius: 6; -fx-cursor: hand; -fx-padding: 10 20;" text="Go Back" HBox.hgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>

@@ -98,6 +98,28 @@ public class RegistrationDAO {
 
 	        return registrations;
 	    }
+	    public List<Registration> getRegistrationsByUser(int userId)
+	            throws SQLException {
+
+	        String sql = "SELECT * FROM registrations WHERE user_id = ?";
+
+	        List<Registration> registrations = new ArrayList<>();
+
+	        try (Connection conn = DatabaseConnection.getConnection();
+	             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+	            stmt.setInt(1, userId);
+
+	            try (ResultSet rs = stmt.executeQuery()) {
+
+	                while (rs.next()) {
+	                    registrations.add(mapRegistration(rs));
+	                }
+	            }
+	        }
+
+	        return registrations;
+	    }
 
 	    public void updateRegistration(Registration registration)
 	            throws SQLException {
@@ -210,5 +232,26 @@ public class RegistrationDAO {
 	                registration.getStatus(),
 	                registration.getWaitPos()
 	        );
+	    }
+	    public void cancelRegistration(int userId, int conferenceId)
+	            throws SQLException {
+
+	        List<Registration> registrations =
+	            getRegistrationsByUser(userId);
+
+	        for (Registration registration : registrations) {
+
+	            if (registration.getConfId() == conferenceId &&
+	                !registration.getStatus().equals("CANCELLED")) {
+
+	                registration.setRegistrationState("CANCELLED", null);
+
+	                updateRegistration(registration);
+
+	                return;
+	            }
+	        }
+
+	        throw new SQLException("No active registration found.");
 	    }
 }

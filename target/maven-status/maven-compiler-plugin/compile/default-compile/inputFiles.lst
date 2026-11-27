@@ -1,15 +1,21 @@
-C:\Users\Admin\Downloads\ConferenceManagementSystem\src\main\java\com\controller\ConferenceController.java
-C:\Users\Admin\Downloads\ConferenceManagementSystem\src\main\java\com\database\DatabaseConnection.java
-C:\Users\Admin\Downloads\ConferenceManagementSystem\src\main\java\com\database\DatabaseSetup.java
-C:\Users\Admin\Downloads\ConferenceManagementSystem\src\main\java\com\database\PWHashGenerator.java
-C:\Users\Admin\Downloads\ConferenceManagementSystem\src\main\java\com\entity\Conference.java
-C:\Users\Admin\Downloads\ConferenceManagementSystem\src\main\java\com\entity\Registration.java
-C:\Users\Admin\Downloads\ConferenceManagementSystem\src\main\java\com\entity\Role.java
-C:\Users\Admin\Downloads\ConferenceManagementSystem\src\main\java\com\entity\User.java
-C:\Users\Admin\Downloads\ConferenceManagementSystem\src\main\java\com\service\ConferenceService.java
-C:\Users\Admin\Downloads\ConferenceManagementSystem\src\main\java\com\view\ConferenceManagementApp.java
-C:\Users\Admin\Downloads\ConferenceManagementSystem\src\main\java\com\view\ConferenceManagementView.java
-C:\Users\Admin\Downloads\ConferenceManagementSystem\src\main\java\DAO\ConferenceDAO.java
-C:\Users\Admin\Downloads\ConferenceManagementSystem\src\main\java\DAO\CredentialsDAO.java
-C:\Users\Admin\Downloads\ConferenceManagementSystem\src\main\java\DAO\RegistrationDAO.java
-C:\Users\Admin\Downloads\ConferenceManagementSystem\src\main\java\DAO\UserDAO.java
+C:\Users\User\OneDrive - Vanier College\sem3\ProgPatterns\project\ConferenceManagementSystemb44del2\src\main\java\com\controller\AdminLoginController.java
+C:\Users\User\OneDrive - Vanier College\sem3\ProgPatterns\project\ConferenceManagementSystemb44del2\src\main\java\com\controller\ConferenceController.java
+C:\Users\User\OneDrive - Vanier College\sem3\ProgPatterns\project\ConferenceManagementSystemb44del2\src\main\java\com\controller\ConferenceDetailsController.java
+C:\Users\User\OneDrive - Vanier College\sem3\ProgPatterns\project\ConferenceManagementSystemb44del2\src\main\java\com\controller\CreateAccountController.java
+C:\Users\User\OneDrive - Vanier College\sem3\ProgPatterns\project\ConferenceManagementSystemb44del2\src\main\java\com\controller\LoginController.java
+C:\Users\User\OneDrive - Vanier College\sem3\ProgPatterns\project\ConferenceManagementSystemb44del2\src\main\java\com\controller\ParticipantDashboardController.java
+C:\Users\User\OneDrive - Vanier College\sem3\ProgPatterns\project\ConferenceManagementSystemb44del2\src\main\java\com\controller\RegistrationsController.java
+C:\Users\User\OneDrive - Vanier College\sem3\ProgPatterns\project\ConferenceManagementSystemb44del2\src\main\java\com\database\DatabaseConnection.java
+C:\Users\User\OneDrive - Vanier College\sem3\ProgPatterns\project\ConferenceManagementSystemb44del2\src\main\java\com\database\DatabaseSetup.java
+C:\Users\User\OneDrive - Vanier College\sem3\ProgPatterns\project\ConferenceManagementSystemb44del2\src\main\java\com\database\PWHashGenerator.java
+C:\Users\User\OneDrive - Vanier College\sem3\ProgPatterns\project\ConferenceManagementSystemb44del2\src\main\java\com\entity\Conference.java
+C:\Users\User\OneDrive - Vanier College\sem3\ProgPatterns\project\ConferenceManagementSystemb44del2\src\main\java\com\entity\Registration.java
+C:\Users\User\OneDrive - Vanier College\sem3\ProgPatterns\project\ConferenceManagementSystemb44del2\src\main\java\com\entity\Role.java
+C:\Users\User\OneDrive - Vanier College\sem3\ProgPatterns\project\ConferenceManagementSystemb44del2\src\main\java\com\entity\User.java
+C:\Users\User\OneDrive - Vanier College\sem3\ProgPatterns\project\ConferenceManagementSystemb44del2\src\main\java\com\service\ConferenceService.java
+C:\Users\User\OneDrive - Vanier College\sem3\ProgPatterns\project\ConferenceManagementSystemb44del2\src\main\java\com\view\ConferenceManagementApp.java
+C:\Users\User\OneDrive - Vanier College\sem3\ProgPatterns\project\ConferenceManagementSystemb44del2\src\main\java\com\view\ConferenceManagementView.java
+C:\Users\User\OneDrive - Vanier College\sem3\ProgPatterns\project\ConferenceManagementSystemb44del2\src\main\java\DAO\ConferenceDAO.java
+C:\Users\User\OneDrive - Vanier College\sem3\ProgPatterns\project\ConferenceManagementSystemb44del2\src\main\java\DAO\CredentialsDAO.java
+C:\Users\User\OneDrive - Vanier College\sem3\ProgPatterns\project\ConferenceManagementSystemb44del2\src\main\java\DAO\RegistrationDAO.java
+C:\Users\User\OneDrive - Vanier College\sem3\ProgPatterns\project\ConferenceManagementSystemb44del2\src\main\java\DAO\UserDAO.java

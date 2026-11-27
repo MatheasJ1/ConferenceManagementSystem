@@ -2,6 +2,7 @@ package DAO;
 
 import java.sql.Connection;
 
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -92,11 +93,28 @@ public class UserDAO {
 			}
 			
 		} catch (SQLException e) {
-			LOGGER.log(Level.SEVERE, "Failed to create participant", e);
+			LOGGER.log(Level.SEVERE, "Failed to retrieve user.", e);
 			throw e;
 		}
 		return null;
 		
+	}
+	public User getUserByEmail(String email) throws SQLException{
+		String sql = "SELECT * FROM users WHERE email = ?";
+		try(Connection conn = DatabaseConnection.getConnection();
+				PreparedStatement stmt = conn.prepareStatement(sql)){
+			stmt.setString(1, email);
+			try(ResultSet rs = stmt.executeQuery()){
+				if(rs.next()) {
+					return new User(rs.getInt("user_id"), rs.getString("full_name"), rs.getString("email"), rs.getInt("age"),Role.valueOf(rs.getString("role")));
+				}
+			}
+			
+		} catch (SQLException e) {
+			LOGGER.log(Level.SEVERE, "Failed to retrieve user.", e);
+			throw e;
+		}
+		return null;
 	}
 	public List<User> getAllUsers() throws SQLException{
 		String sql = "SELECT * FROM users";
@@ -151,5 +169,22 @@ public class UserDAO {
 			LOGGER.log(Level.SEVERE, "Failed to delete user.", e);
 			throw e;
 		}
+	}
+
+
+	public String getPasswordHash(int userId) {
+		String sql = "SELECT password_hash FROM credentials WHERE user_id = ?";
+		try(Connection conn = DatabaseConnection.getConnection();
+				PreparedStatement stmt = conn.prepareStatement(sql)){
+			stmt.setInt(1, userId);
+			ResultSet rs = stmt.executeQuery();
+			if(rs.next()) {
+				return rs.getString("password_hash");
+			}
+			
+		}catch(SQLException e) {
+			LOGGER.log(Level.SEVERE, "Failed to retrieve password hash", e);
+		}
+		return null;
 	}
 }
